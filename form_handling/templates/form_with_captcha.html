@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма с капчей</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+    <h1>Форма с капчей</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="g-recaptcha" data-sitekey="6Lfkvu8oAAAAAJZbAdMm2CYZoyQi7JTIUIfuogTI"></div>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
